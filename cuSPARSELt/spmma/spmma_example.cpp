@@ -80,15 +80,15 @@ using namespace std;
 //main(void)
 int main(int argc, char** argv) {
 
-    int m = atoi(argv[2]) ;
+    int m = atoi(argv[1]) ;
 
     cout << "m:" << m << endl;
 
-    int n = atoi(argv[3]) ;
+    int n = atoi(argv[2]) ;
 
     cout << "n:" << n << endl;
 
-    int k = atoi(argv[4]) ;
+    int k = atoi(argv[3]) ;
 
     cout << "k:" << k << endl;
 
