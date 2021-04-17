@@ -75,6 +75,8 @@
 
 constexpr int EXIT_UNSUPPORTED = 2;
 
+using namespace std;
+
 //main(void)
 int main(int argc, char** argv) {
 
