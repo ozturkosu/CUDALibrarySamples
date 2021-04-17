@@ -50,6 +50,8 @@
 #include <cusparseLt.h>       // cusparseLt header
 #include <cstdio>             // printf
 #include <cstdlib>            // std::rand
+#include <iostream>
+
 
 #define CHECK_CUDA(func)                                                       \
 {                                                                              \
@@ -73,7 +75,14 @@
 
 constexpr int EXIT_UNSUPPORTED = 2;
 
-int main(void) {
+//main(void)
+int main(int argc, char** argv) {
+
+    int m = atoi(argv[2]) ;
+    int n = atoi(argv[3]) ;
+    int k = atoi(argv[4]) ;
+
+
     int major_cc, minor_cc;
     CHECK_CUDA( cudaDeviceGetAttribute(&major_cc,
                                        cudaDevAttrComputeCapabilityMajor, 0) )
@@ -86,9 +95,10 @@ int main(void) {
         return EXIT_UNSUPPORTED;
     }
     // Host problem definition, row-major order
-    constexpr int m     = 32; // bigger sizes may require dynamic allocations
-    constexpr int n     = 32; // bigger sizes may require dynamic allocations
-    constexpr int k     = 32; // bigger sizes may require dynamic allocations
+    //constexpr int m     = 32; // bigger sizes may require dynamic allocations
+    //constexpr int n     = 32; // bigger sizes may require dynamic allocations
+    //constexpr int k     = 32; // bigger sizes may require dynamic allocations
+
     auto          order = CUSPARSE_ORDER_ROW;
     auto          opA   = CUSPARSE_OPERATION_NON_TRANSPOSE;
     auto          opB   = CUSPARSE_OPERATION_NON_TRANSPOSE;
