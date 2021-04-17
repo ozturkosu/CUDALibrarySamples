@@ -79,8 +79,11 @@ constexpr int EXIT_UNSUPPORTED = 2;
 int main(int argc, char** argv) {
 
     int m = atoi(argv[2]) ;
+    std::printf(m);
     int n = atoi(argv[3]) ;
+    std::printf(n);
     int k = atoi(argv[4]) ;
+    std::printf(k);
 
 
     int major_cc, minor_cc;
